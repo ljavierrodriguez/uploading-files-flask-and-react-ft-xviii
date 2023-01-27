@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql:
+    platform: linux/x86-64
+    image: 'mysql:latest'
+    restart: always
+    volumes:
+    - './mysql_data:/var/lib/mysql'
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    ports:
+    - '3306:3306'
